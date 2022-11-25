@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.junior.autenticacaospringsecurity.model.Usuario;
 import com.junior.autenticacaospringsecurity.repository.UsuarioRepository;
+import com.junior.autenticacaospringsecurity.service.exceptions.ExistsCpfException;
 
 @Service
 public class UsuarioService {
@@ -17,7 +18,7 @@ public class UsuarioService {
     // SALVAR USUÁRIO
     public Usuario salvarUsuario(Usuario usuario) {
         if (usuarioRepository.existsByCpf(usuario.getCpf())) {
-            throw new RuntimeException("CPF já usado");
+            throw new ExistsCpfException(usuario);
         }
         return usuarioRepository.save(usuario);
     }
