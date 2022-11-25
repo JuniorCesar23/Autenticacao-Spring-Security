@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.junior.autenticacaospringsecurity.model.ContaBanco;
 import com.junior.autenticacaospringsecurity.repository.BancoRepository;
-import com.junior.autenticacaospringsecurity.service.exceptions.ExistsCpfException;
 
 @Service
 public class BancoService {
