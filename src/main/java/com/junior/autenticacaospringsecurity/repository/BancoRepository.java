@@ -7,5 +7,5 @@ import com.junior.autenticacaospringsecurity.model.ContaBanco;
 
 @Repository
 public interface BancoRepository extends JpaRepository<ContaBanco, String> {
-    
+
 }

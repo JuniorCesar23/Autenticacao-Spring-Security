@@ -1,5 +1,6 @@
 package com.junior.autenticacaospringsecurity.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,13 +21,6 @@ public class ContaBanco {
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String numeroConta;
 
-    @OneToOne
-    private Usuario usuario;
-
     public ContaBanco(){}
-
-    public ContaBanco(Usuario usuario){
-        this.usuario = usuario;
-    }
     
 }

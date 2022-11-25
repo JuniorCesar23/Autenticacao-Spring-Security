@@ -1,7 +1,9 @@
 package com.junior.autenticacaospringsecurity.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,6 +21,9 @@ public class Usuario {
     private Integer idade;
     private String numeroContato;
     private String email;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private ContaBanco contaBanco;
 
     public Usuario(){}
 

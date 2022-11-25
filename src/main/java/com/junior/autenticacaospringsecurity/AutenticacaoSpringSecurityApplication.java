@@ -26,11 +26,11 @@ public class AutenticacaoSpringSecurityApplication implements CommandLineRunner 
 	@Override
 	public void run(String... args) throws Exception {
 
-		Usuario usuario = new Usuario("2222", "Júnior César", 21, "99", "gmail");
-		ContaBanco contaBanco = new ContaBanco(usuario);
-
-		usuarioService.salvarUsuario(usuario);
+		ContaBanco contaBanco = new ContaBanco();
+		Usuario usuario = new Usuario("2222", "Júnior César", 21, "99", "gmail", contaBanco);
+		
 		bancoService.salvarContaBanco(contaBanco);
+		usuarioService.salvarUsuario(usuario);
 
 	}
 
