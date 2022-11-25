@@ -27,7 +27,7 @@ public class AutenticacaoSpringSecurityApplication implements CommandLineRunner 
 	public void run(String... args) throws Exception {
 
 		ContaBanco contaBanco = new ContaBanco();
-		Usuario usuario = new Usuario("2222", "Júnior César", 21, "99", "gmail", contaBanco);
+		Usuario usuario = new Usuario("2222", "Júnior César", "123456", contaBanco);
 		
 		bancoService.salvarContaBanco(contaBanco);
 		usuarioService.salvarUsuario(usuario);

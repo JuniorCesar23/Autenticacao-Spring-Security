@@ -1,5 +1,7 @@
 package com.junior.autenticacaospringsecurity.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,7 +14,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class ContaBanco {
+public class ContaBanco implements Serializable {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
